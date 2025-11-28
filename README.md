@@ -145,7 +145,7 @@ mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
 input_file_path = "input_file.webp"
 
 # full version message size is unlimited (demo 16 chars max)
-secret_message = "Secret message 3333333333333333333333333333"
+secret_message = "Secret message"
 
 # full version password length is 128 characters max (demo 8 chars max)
 password = "Pa$$word"
