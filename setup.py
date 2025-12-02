@@ -12,7 +12,7 @@ setuptools.setup(name='steganography_online_codec',
                  long_description=long_description,
                  long_description_content_type="text/markdown",
 
-                 keywords="steganography stego cryptography security image secret aes encryption",
+                 keywords="steganography stegano stego cryptography security image secret aes encryption",
 
                  url='https://www.pelock.com',
 

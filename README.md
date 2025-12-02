@@ -1,4 +1,4 @@
-# Steganography Online Codec
+# Steganography Online Codec SDK For Python
 
 **Steganographic Online Codec** allows you to hide a password encrypted message within the images & photos using [AES](https://www.youtube.com/watch?v=O4xNJsjtN6E)
 encryption algorithm with a 256-bit [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) derived key.
@@ -24,7 +24,7 @@ password.
 
 ## Installation (for Python 3)
 
-Preferred way of WebApi interface installation is via [pip](https://pypi.org/project/pip/) (Package Installer for Python).
+The preferred way of Web API SDK installation is via [pip](https://pypi.org/project/pip/) (Package Installer for Python).
 
 Run:
 
@@ -32,7 +32,7 @@ Run:
 pip install steganography-online-codec
 ```
 
-or 
+or
 
 ```
 python3 -m pip install steganography-online-codec
@@ -53,6 +53,16 @@ If you don't want to use Python module, you can import directly from the file:
 ```python
 from pelock.steganography_online_codec import *
 ```
+
+## Packages for other programming languages
+
+The installation packages have been uploaded to repositories for several popular programming languages and their source codes have been published on GitHub:
+
+| Repository   | Language | Installation | Package | GitHub |
+| ------------ | ---------| ------------ | ------- | ------ |
+| ![PyPI repository for Python](https://www.pelock.com/img/logos/repo-pypi.png) | Python | Run `pip install radio-code-calculator` | [PyPi](https://pypi.org/project/steganography-online-codec/) | [Sources](https://github.com/PELock/Steganography-Online-Codec-Python)
+| ![NPM repository for JavaScript and TypeScript](https://www.pelock.com/img/logos/repo-npm.png) | JavaScript, TypeScript | Run `npm i radio-code-calculator` or add the following to `dependencies` section of your `package.json` file `"dependencies": { "steganography-online-codec": "latest" },` | [NPM](https://www.npmjs.com/package/steganography-online-codec) | [Sources](https://github.com/PELock/Steganography-Online-Codec-JavaScript)
+
 
 ### How to hide a secret message within an image file
 
@@ -81,7 +91,7 @@ from steganography_online_codec import *
 #
 # create Steganography Online Codec class instance (we are using our activation key)
 #
-mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
+mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-WEB-API-KEY")
 
 #
 # encode a hidden message (encrypted with your password) within an image file
@@ -101,7 +111,7 @@ else:
 
 ```
 
-### More complex example with better explanation and proper error codes checking 
+### More complex example with better explanation and proper error codes checking
 
 ```python
 #!/usr/bin/env python
@@ -134,7 +144,7 @@ from steganography_online_codec import *
 #
 # create Steganography Online Codec class instance (we are using our activation key)
 #
-mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
+mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-WEB-API-KEY")
 
 #
 # encode a hidden message within the source image file
@@ -183,7 +193,7 @@ else:
 	print("Something unexpected happen while trying to encode the message.")
 ```
 
-### How to extract encoded secret message from the image file 
+### How to extract encoded secret message from the image file
 
 ```python
 #!/usr/bin/env python
@@ -217,7 +227,7 @@ from steganography_online_codec import *
 #
 # create Steganography Online Codec class instance (we are using our activation key)
 #
-mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
+mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-WEB-API-KEY")
 
 #
 # extract a hidden message from the previously encoded image file
@@ -290,7 +300,7 @@ from steganography_online_codec import *
 #
 # create Steganography Online Codec class instance (we are using our activation key)
 #
-mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
+mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-WEB-API-KEY")
 
 #
 # login to the service
@@ -319,7 +329,9 @@ else:
 	print("Something unexpected happen while trying to login to the service.")
 ```
 
-## Links
+## Got questions?
+
+If you are interested in the Steganography Online Codec Web API or have any questions regarding SDK packages, technical or if something is not clear, [please contact me](https://www.pelock.com/contact). I'll be happy to answer all of your questions.
 
 Bartosz Wójcik
 

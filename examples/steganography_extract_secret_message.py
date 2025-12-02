@@ -29,7 +29,7 @@ from steganography_online_codec import *
 #
 # create Steganography Online Codec class instance (we are using our activation key)
 #
-mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-CODE-GOES-HERE")
+mySteganographyOnlineCodec = SteganographyOnlineCodec("YOUR-WEB-API-KEY")
 
 #
 # extract a hidden message from the previously encoded image file

@@ -16,7 +16,7 @@
 ###############################################################################
 
 from enum import IntEnum
-from typing import Optional, Dict, Union
+from typing import Optional, Dict
 
 # required external package - install with "pip install requests" (if installing manually)
 import requests
@@ -71,14 +71,14 @@ class Errors(IntEnum):
 class SteganographyOnlineCodec(object):
     """Steganography Online Codec module"""
 
-    # 
+    #
     # @var string default Steganography Online Codec WebApi endpoint
-    # 
+    #
     API_URL = "https://www.pelock.com/api/steganography-online-codec/v1"
 
-    # 
-    # @var string WebApi key for the service (required)
-    # 
+    #
+    # @var string WebApi key for the service (leave empty for demo version)
+    #
     _apiKey = ""
 
     def __init__(self, api_key: Optional[str] = None):
@@ -137,7 +137,7 @@ class SteganographyOnlineCodec(object):
 
         return result
 
-    def decode(self, input_image_path: str, password: str):
+    def decode(self, input_image_path: str, password: str) -> Dict:
         """Retrieve hidden message from the encoded image file (PNG format)
 
         :param input_image_path: Input image path (only PNG)
@@ -177,13 +177,15 @@ class SteganographyOnlineCodec(object):
             if "image" in params_array:
 
                 # does the file exists?
-                if not os.path.isfile(params_array["image"]):
+                image_path = params_array["image"]
+                if not os.path.isfile(image_path):
                     return {"error": Errors.INVALID_INPUT}
 
-                files = {"image": open(params_array["image"], "rb")}
-                params_array.pop("image", None)
-
-                response = requests.post(self.API_URL, files=files, data=params_array)
+                # read file and send it within the POST request
+                with open(image_path, "rb") as image_file:
+                    files = {"image": image_file}
+                    params_array.pop("image", None)
+                    response = requests.post(self.API_URL, files=files, data=params_array)
             else:
                 response = requests.post(self.API_URL, data=params_array)
 
