@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(name='steganography_online_codec',
 
-                 version='1.0.0',
+                 version='1.0.1',
 
                  description='Steganography Online Codec allows you to hide a password encrypted message within the '
                              'images & photos using AES encryption algorithm with a 256-bit PBKDF2 derived key.',
